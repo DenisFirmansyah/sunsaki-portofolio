@@ -1,103 +1,99 @@
 import Image from "next/image";
+import { Footer } from "./component/footer";
+import { NavBar } from "./component/navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    <div className="bg-blue-900">
+      <NavBar />
+      <main className="px-5 py-12 text-2xl text-gray-300">
+        <section className="flex">
+          <div className="px-10">
+            <Image src="/images/profile.jpg" alt="" width={300} height={100}></Image>
+          </div>
+          <div className="">
+            <p>Hi, I&apos;m</p>
+            <h2 className="text-4xl">SunSaKi</h2>
+            <p>A College Student who has interest in 2D Illustrator, Narrative Designer, Game Developer, and Front-End Developer <br /><br />Let me give you a tour to My World!</p>
+          </div>
+        </section>
+        <div className="w-full max-w-2xl mx-auto pt-12 mb-12 border-b-1 border-b-white"></div>
+        <section>
+          <h1 className="text-center text-5xl mb-5">Know About Me</h1>
+          <div className="flex">
+            <Image src="/images/photo-transparent.png" alt="" width={400} height={100} className="px-10"/>
+            <div className="max-w-4xl">
+              <p>I am an individual who is oriented and has a strong interest in technology and creative fields. My good skills can produce something satisfying for those who enjoy my work, and also myself.</p>
+              <br />
+              <ul>
+                <li><strong>Full Name:</strong> Denis Firmansyah</li>
+                <li><strong>Age:</strong> 20</li>
+                <li><strong>City:</strong> West Bandung, West Java, Indonesia</li>
+                <li><strong>Last Education:</strong> UIN SGD Bandung</li>
+                <li><strong>Profession:</strong> Traditional 2D Illustrator, Digital 2D Illustrator, 3D Designer, Narrative Designer, Game Programmer, Front-End Developer</li>
+              </ul>
+              <br />
+              <p>See my Resume <Link href="https://drive.google.com/file/d/13JWxZufi6pA3OqZ2HGj9Kb7mNdYbQVfR/view?usp=sharing" className="underline text-white hover:text-gray-300">here</Link></p>
+            </div>
+          </div>
+        </section>
+        <div className="w-full max-w-2xl mx-auto pt-12 mb-12 border-b-1 border-b-white"></div>
+        <section className="text-xl">
+          <h1 className="text-center text-5xl mb-5">Behold My Power</h1>
+          <div className="grid grid-cols-3 gap-5 w-full mx-auto">
+            <div className="border-1 rounded-sm p-4">
+              <h2>JavaScript</h2>
+              <p>Mampu membuat fungsi yang diterpakan untuk Front-end website</p>
+              <p>Mampu menerapkan animasi untuk tampilan sebuah website</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>NextJs</h2>
+              <p>Mengetahui cara menggunakan framework NextJs untuk kebutuhan website</p>
+              <p>Mampu membangun sebuah Front-end website menggunakan framework NextJs</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>Tailwind CSS</h2>
+              <p>Mahir dalam mengoperasikan framework Tailwind CSS untuk menciptakan tampilan yang menarik</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>Git</h2>
+              <p>Mengetahui dasar penggunaan Git untuk menghubungkan proyek dengan GitHub</p>
+              <p>Mampu berkoordinasi dengan tim menggunakan bantuan software GitHub</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>Unity Engine</h2>
+              <p>Menguasai dasar mekanisme untuk pembuatan game menggunakan game engine Unity</p>
+              <p>Memahami sebagian besar tools yang disediakan dalam Unity Engine</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>C#</h2>
+              <p>Mampu membuat kode fungsional untuk pengembangan game menggunakan Unity Engine</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>Blender</h2>
+              <p>Memahami dasar penggunaan software Blender untuk membuat model 3D</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>2D Illustration</h2>
+              <p>Menguasai software Ibis Paint untuk membuat ilustrasi 2D</p>
+              <p>Mampu menggunakan tools yang ada pada software Ibis Paint untuk membantu pembuatan ilustrasi 2D</p>
+            </div>
+            <div className="border-1 rounded-sm p-4">
+              <h2>Narrative Design</h2>
+              <p>Mampu membangun sebuah cerita yang layak dibaca</p>
+              <p>Menguasai aturan penulisan dalam pembuatan sebuah narasi</p>
+              <p>Mampu membawa alur cerita ke arah happy ending atau bad ending</p>
+            </div>
+          </div>
+        </section>
+        <div className="w-full max-w-2xl mx-auto pt-12 mb-12 border-b-1 border-b-white"></div>
+        <section className="text-xl">
+          <h1 className="text-center text-5xl mb-5">Let&apos;s See My Project Galery</h1>
+          
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }
