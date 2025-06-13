@@ -26,12 +26,12 @@ body {
   --font-rowdies: 'Rowdies', sans-serif;
 }
 
-h1, h2, h3, strong {
+h1, h2, h3 {
   color: white;
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
 }
 
 .rowdies {
